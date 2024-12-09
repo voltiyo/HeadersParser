@@ -7,7 +7,8 @@ app.use(express.json())
 
 
 app.get("/",(req,res)=>{
-    res.send(req.connection.remoteAddress)
+    const clientIP = req.ip || req.connection.remoteAddress;
+    res.send(`Your IP Address is: ${clientIP}`);
 })
 
 app.listen(3000)
