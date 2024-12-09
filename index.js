@@ -7,8 +7,7 @@ app.use(express.json())
 
 
 app.get("/",(req,res)=>{
-    console.log(req.ip)
-    res.send("hello world !")
+    res.send(req.socket.remoteAddress)
 })
 
 app.listen(3000)
