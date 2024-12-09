@@ -9,7 +9,7 @@ app.enable("trust proxy")
 app.get("/api/whoami",(req,res)=>{
     const data = {
         ipaddress: req.ip,
-        language: req.headers['accept-language'],
+        language: req.get("Accept-Language"),
         software: req.headers['user-agent']
     }
     res.send(data);
