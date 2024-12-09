@@ -6,7 +6,7 @@ app.use(cors())
 app.use(express.json())
 app.enable("trust proxy")
 
-app.get("/",(req,res)=>{
+app.get("/api/whoami",(req,res)=>{
     const data = {
         ipaddress: req.ip,
         language: req.headers['accept-language'],
