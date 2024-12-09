@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "node index.js",
+    "build": "no build needed"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
